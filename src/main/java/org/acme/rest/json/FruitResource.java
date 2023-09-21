@@ -42,7 +42,7 @@ public class FruitResource {
     public Set<Fruit> add(Fruit fruit) {
         //fruits.add(fruit);
         
-        amqFruitService.post("{\"message\":\""+fruit.name+"\"}");
+        amqFruitService.post("{\"message\":\"Cadastrar "+fruit.name+" com valor "+fruit.price+"\"}");
 
         return fruits;
     }
