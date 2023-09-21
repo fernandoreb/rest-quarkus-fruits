@@ -42,7 +42,7 @@ public class FruitResource {
     public Set<Fruit> add(Fruit fruit) {
         //fruits.add(fruit);
 
-        amqFruitService.post("{\"name\":\"fruit.name\"}");
+        amqFruitService.post("add fruit:"+fruit.name);
 
         return fruits;
     }
