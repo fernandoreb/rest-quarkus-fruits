@@ -41,8 +41,8 @@ public class FruitResource {
     @POST
     public Set<Fruit> add(Fruit fruit) {
         //fruits.add(fruit);
-
-        amqFruitService.post("add fruit:"+fruit.name);
+        
+        amqFruitService.post("{\"message\":\""+fruit.name+"\"}");
 
         return fruits;
     }
