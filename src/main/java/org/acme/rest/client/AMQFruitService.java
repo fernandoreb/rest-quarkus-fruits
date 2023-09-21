@@ -19,5 +19,5 @@ public interface AMQFruitService {
     @POST
     @Path("/producer")
     @Produces(MediaType.APPLICATION_JSON)
-    String post(@RestForm String message);
+    String post(String message);
 }
