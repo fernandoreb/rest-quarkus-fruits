@@ -17,7 +17,8 @@
 
         $scope.form = {
           name: "",
-          description: ""
+          description: "",
+          price: ""
         };
 
         //Now load the data from server
@@ -63,6 +64,7 @@
         function _clearForm() {
           $scope.form.name = "";
           $scope.form.description = "";
+          $scope.form.price = "";
         }
       });
     </script>
