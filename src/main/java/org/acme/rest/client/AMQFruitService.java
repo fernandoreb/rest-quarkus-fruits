@@ -7,6 +7,7 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.FormParam;
+import jakarta.ws.rs.Produces;
 import java.util.Set;
 
 import org.acme.rest.json.*;
