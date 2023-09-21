@@ -20,6 +20,9 @@ public class FruitResource {
     @RestClient
     PriceFruitService priceFruitService;
 
+    @RestClient
+    AMQFruitService amqFruitService;
+
     public FruitResource() {
         fruits.add(new Fruit("Apple", "Winter fruit"));
         fruits.add(new Fruit("Pineapple", "Tropical fruit"));
@@ -37,7 +40,10 @@ public class FruitResource {
 
     @POST
     public Set<Fruit> add(Fruit fruit) {
-        fruits.add(fruit);
+        //fruits.add(fruit);
+
+        amqFruitService.post("{\"name\":\"fruit.name\"}");
+
         return fruits;
     }
 
